@@ -16,6 +16,7 @@ const fields = [
     placeholder: "Enter collection description",
   },
   { name: "price", label: "Price", placeholder: "Enter collection Price" },
+  { name: "size", label: "Size", placeholder: "Enter Size" },
 ];
 const provider = "https://rpc.testnet.lukso.network";
 
@@ -57,6 +58,7 @@ function CreateCollection() {
         images: filteredImages,
         description: formValues?.description ?? "",
         assets: filteredAssets,
+        icon: filteredImages[0],
         ...formValues,
       });
       console.log(res);
